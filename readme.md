@@ -26,3 +26,8 @@ Use the `--manifest` flag to change the manifest file name and location.
 ```
 $ node-file-rev assets/css/app.css,assets/js/app.js --manifest=assets/rev.json
 ```
+
+Use the `--root` flag to specify the root directory e.g. `assets/` this will be removed from the filepath in the manifest file.
+```
+assets/css/app.css => css/app.css
+```
