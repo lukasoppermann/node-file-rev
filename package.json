@@ -1,6 +1,6 @@
 {
   "name": "node-file-rev",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Simple node cli tool to revision files and write them to a rev-manifest.json",
   "main": "cli.js",
   "dependencies": {
