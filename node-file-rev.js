@@ -28,7 +28,7 @@ module.exports = (files, flags, cli) => {
         // If the file doesn't exist, the content will be an empty object by default.
         let jsonFile = editJsonFile(flags.manifest)
         // add file version
-        jsonFile.set(filePath.replace(/\./g, '\\.'), newFilename)
+        jsonFile.set(filePath.replace(/\./g, '\\.').replace(flags.root,''), newFilename.replace(flags.root,''))
         // save to json
         jsonFile.save()
       })
