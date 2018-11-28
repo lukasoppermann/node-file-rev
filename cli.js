@@ -28,4 +28,4 @@ const cli = meow(`
     }
 	}
 })
-nodeFileRev(cli.input[0], cli.flags, cli)
+nodeFileRev(cli.input, cli.flags, cli)

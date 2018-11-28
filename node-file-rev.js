@@ -2,24 +2,15 @@ const hasha = require('hasha')
 const fs = require('fs')
 const editJsonFile = require('edit-json-file')
 const chalk = require('chalk')
-const glob = require('glob')
 
-module.exports = (files, flags, cli) => {
-  if (files === undefined) {
+module.exports = (input, flags, cli) => {
+  if (input === undefined) {
     console.log(chalk.bold.red('⛔ ERROR: An input file needs to be provided.'))
     cli.showHelp()
     return
   }
   // if argumens are provided
-  files.split(',')
-  // remove empty
-  .filter(file => file.length > 0)
-  // glob if nessesary
-  .map(file => glob.sync(file, null))
-  // flatten nessesary because of glob
-  .flat(2)
-  // run trough each file
-  .forEach( filePath => {
+  input.forEach( filePath => {
     hasha.fromFile(filePath, { algorithm: 'md5' }).then(hash => {
       // split filename
       let fileArray = filePath.split('.')
