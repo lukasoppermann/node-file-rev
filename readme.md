@@ -19,7 +19,7 @@ $ node-file-rev assets/app.css
 
 Use a comma separated list (NO spaces) for multiple files.
 ```
-$ node-file-rev assets/css/app.css,assets/js/app.js
+$ node-file-rev assets/css/app.css,assets/js/*.js
 ```
 
 Use the `--manifest` flag to change the manifest file name and location.
