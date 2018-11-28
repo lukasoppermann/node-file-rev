@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 'use strict'
 
-const argv = require('yargs').argv
 const meow = require('meow')
 const nodeFileRev = require('./node-file-rev')
 
