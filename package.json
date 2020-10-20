@@ -4,23 +4,22 @@
   "description": "Simple node cli tool to revision files and write them to a rev-manifest.json",
   "main": "cli.js",
   "dependencies": {
-    "chalk": "^2.4.1",
+    "chalk": "4.1",
     "edit-json-file": "^1.2.0",
-    "hasha": "^3.0.0",
-    "meow": "^5.0.0"
+    "hasha": "^5.2.2",
+    "meow": "^7.1.1"
   },
-  "devDependencies": {},
   "scripts": {
     "pretest": "npm run clean && npm run prepare",
-    "test": "node-file-rev tests/assets/test.css   tests/assets/*.file.css --manifest=tests/assets/rev.json",
-    "clean": "rm -r tests/assets/*",
+    "test": "node-file-rev tests/assets/test.css tests/assets/*.file.css --manifest=tests/assets/rev.json",
+    "clean": "rm -rf tests/assets/*",
     "prepare": "echo 'hello{ color: blue; }' >> tests/assets/another.file.css && echo 'hello{ color: red; }' >> tests/assets/test.css && echo 'div{ border: 1px solid red; }' >> tests/assets/other.file.css",
     "preversion": "npm run pretest",
     "version": "git add -A",
     "postversion": "git push && git push --tags"
   },
   "bin": {
-    "node-file-rev": "./cli.js"
+    "node-file-rev": "cli.js"
   },
   "repository": {
     "type": "git",
