@@ -4,7 +4,6 @@
   "description": "Simple node cli tool to revision files and write them to a rev-manifest.json",
   "main": "cli.js",
   "dependencies": {
-    "chalk": "4.1",
     "hasha": "^5.2.2",
     "meow": "^7.1.1"
   },

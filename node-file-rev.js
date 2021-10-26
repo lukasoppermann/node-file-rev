@@ -1,10 +1,9 @@
 const hasha = require('hasha')
 const fs = require('fs')
-const chalk = require('chalk')
 
 module.exports = (input, flags, cli) => {
   if (input === undefined) {
-    console.log(chalk.bold.red('⛔ ERROR: An input file needs to be provided.'))
+    console.log('⛔ ERROR: An input file needs to be provided.')
     cli.showHelp()
     return
   }
