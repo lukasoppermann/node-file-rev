@@ -11,7 +11,7 @@
   },
   "scripts": {
     "pretest": "npm run clean && npm run prepare",
-    "test": "node-file-rev tests/assets/test.css tests/assets/*.file.css --manifest=tests/assets/rev.json",
+    "test": "node ./cli.js tests/assets/test.css tests/assets/*.file.css --manifest=tests/assets/rev.json",
     "clean": "rm -rf tests/assets/*",
     "prepare": "echo 'hello{ color: blue; }' >> tests/assets/another.file.css && echo 'hello{ color: red; }' >> tests/assets/test.css && echo 'div{ border: 1px solid red; }' >> tests/assets/other.file.css",
     "preversion": "npm run pretest",
